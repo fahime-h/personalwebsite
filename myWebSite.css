@@ -238,7 +238,7 @@ body {
   color: #6c757d;
   opacity: .1;
   font-weight: 600;
-  font-size: 4em;
+  font-size: 7em;
   text-align: center;
   text-transform: uppercase;
   padding-top: 50px;
@@ -876,10 +876,6 @@ header ul {
   .left-container {
     display: none;
   }
-  /* header h1 {
-    font-size: 1.25rem !important;
-    font-weight: 500;
-  } */
   .right-container {
     width: 100%;
   }
@@ -964,6 +960,12 @@ header ul {
   }
   .contact {
     height: calc(100vh - 7vh);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .transparent-text {
+    font-size: 4.2em !important;
   }
 }
 
