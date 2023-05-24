@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,9 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fahime Honari - Personal Website</title>
     <link rel="stylesheet" href="myWebSite.css" />
-    <link rel="icon" href="./images/Untitled-2.jpg">
+    <link rel="icon" href="./images/fffff.png">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </head>
   <body>
+    <header>
+      <div class="header-inside">
+        <div class="mobile-menu">
+          <ul>
+            <li id="section">
+              <a href="#home" id="item">Home</a>
+            </li>
+            <li id="section">
+              <a href="#about-me" id="item">About Me</a>
+            </li>
+            <li id="section">
+              <a href="#what-i-do" id="item">What I Do</a>
+            </li>
+            <li id="section">
+              <a href="#resume" id="item">Resume</a>
+            </li>
+            <li id="section">
+              <a href="#portfolio" id="item">Portfolio</a>
+            </li>
+            <li id="section">
+              <a href="#contact" id="item">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="left-header">
+          <h1>Fahime Honari</h1>
+        </div>
+        <div class="right-header">
+          <ul>
+            <li>
+              <a href="">
+                <svg
+                  role="img"
+                  fill="#fff"
+                  viewBox="0 0 24 24"
+                  width="14"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>LinkedIn</title>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+              role="img"
+              fill="#fff"
+              viewBox="0 0 24 24"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>GitHub</title>
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              />
+            </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg
+              role="img"
+              fill="#fff"
+              viewBox="0 0 24 24"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>CodePen</title>
+              <path
+                d="M18.144 13.067v-2.134L16.55 12zm1.276 1.194a.628.628 0 01-.006.083l-.005.028-.011.053-.01.031c-.005.016-.01.031-.017.047l-.014.03a.78.78 0 01-.021.043l-.019.03a.57.57 0 01-.08.1l-.026.025a.602.602 0 01-.036.03l-.029.022-.01.008-6.782 4.522a.637.637 0 01-.708 0L4.864 14.79l-.01-.008a.599.599 0 01-.065-.052l-.026-.025-.032-.034-.021-.028a.588.588 0 01-.067-.11l-.014-.031a.644.644 0 01-.017-.047l-.01-.03c-.004-.018-.008-.036-.01-.054l-.006-.028a.628.628 0 01-.006-.083V9.739c0-.028.002-.055.006-.083l.005-.027.011-.054.01-.03a.574.574 0 01.12-.217l.031-.034.026-.025a.62.62 0 01.065-.052l.01-.008 6.782-4.521a.638.638 0 01.708 0l6.782 4.521.01.008.03.022.035.03c.01.008.017.016.026.025a.545.545 0 01.08.1l.019.03a.633.633 0 01.021.043l.014.03c.007.016.012.032.017.047l.01.031c.004.018.008.036.01.054l.006.027a.619.619 0 01.006.083zM12 0C5.373 0 0 5.372 0 12 0 18.627 5.373 24 12 24c6.628 0 12-5.372 12-12 0-6.627-5.372-12-12-12m0 10.492L9.745 12 12 13.51 14.255 12zm.638 4.124v2.975l4.996-3.33-2.232-1.493zm-6.272-.356l4.996 3.33v-2.974l-2.764-1.849zm11.268-4.52l-4.996-3.33v2.974l2.764 1.85zm-6.272-.356V6.41L6.366 9.74l2.232 1.493zm-5.506 1.549v2.134L7.45 12Z"
+              />
+            </svg>
+              </a>
+            </li>
+          </ul>
+          <button id="open-menu-btn" onclick="openMenu()">
+            <svg class="ham hamRotate ham4" stroke="red" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+              <path
+                    class="line top"
+                    d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+              <path
+                    class="line middle"
+                    d="m 70,50 h -40" />
+              <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+            </svg>
+            <!-- <span></span>
+            <span></span>
+            <span></span> -->
+          </button>
+        </div>
+      </div>
+    </header>
     <div class="left-container">
       <div class="pic-name">
         <img
@@ -21,22 +119,22 @@
       <div class="menu">
         <ul>
           <li id="section">
-            <a href="#home" class="active" id="item">Home</a>
+            <a href="#home" class="active-menu menu-item" id="item">Home</a>
           </li>
           <li id="section">
-            <a href="#about-me" id="item">About Me</a>
+            <a href="#about-me" id="item" class="menu-item">About Me</a>
           </li>
           <li id="section">
-            <a href="#what-i-do" id="item">What I Do</a>
+            <a href="#what-i-do" id="item" class="menu-item">What I Do</a>
           </li>
           <li id="section">
-            <a href="#resume" id="item">Resume</a>
+            <a href="#resume" id="item" class="menu-item">Resume</a>
           </li>
           <li id="section">
-            <a href="#portfolio" id="item">Portfolio</a>
+            <a href="#portfolio" id="item" class="menu-item">Portfolio</a>
           </li>
           <li id="section">
-            <a href="#contact" id="item">Contact</a>
+            <a href="#contact" id="item" class="menu-item">Contact</a>
           </li>
         </ul>
       </div>
@@ -99,7 +197,7 @@
           />
         </svg>
       </a>
-      <section class="home" id="home">
+      <section class="home" id="home" data-menu="item">
         <p>Welcome</p>
         <div class="typing-container"></div>
         <p>Based in Mashhad, Iran.</p>
@@ -169,7 +267,7 @@
                 Mashhad, Iran
               </li>
             </ul>
-            <a class="dl-btn" href="resume.pdf" download>
+            <a class="dl-btn" href="" download>
               <p>Download CV</p>
               <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="18" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
             </a>
@@ -537,13 +635,15 @@
             <p>Send me a note</p>
             <div>
               <form action="">
-                <input type="text" name="name" id="name" placeholder="Name" />
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />
+                <div class="input-flex">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
                 <textarea
                   name="message"
                   id="message"
@@ -562,6 +662,7 @@
       <footer>
         <p>Copyright © 2023 <span>Fahime</span>. All Rights Reserved.</p>
       </footer>
+      
     </div>
 
     <script>
@@ -633,8 +734,8 @@
 
       document.querySelectorAll("#item").forEach((value) => {
         value.addEventListener("click", (e) => {
-          document.querySelector(".active").classList.toggle("active");
-          e.target.classList.toggle("active");
+          document.querySelector(".active-menu").classList.toggle("active-menu");
+          e.target.classList.toggle("active-menu");
         });
       });
 
@@ -679,34 +780,35 @@
 
       //Album Filtering End ........................................................
 
-      //Changing Active Menu Item on Pge scroll Start ........................................................
+      //Changing Active Menu Item on Page scroll Start ........................................................
 
-      document.addEventListener('DOMContentLoaded', function(){ 
-  
         const sections = document.querySelectorAll("section");
-        const menu_links = document.querySelectorAll("a");
+        const menu_links = document.querySelectorAll("a.menu-item");
+        console.log(menu_links);
         
-        const makeActive = (link) => menu_links[link].classList.add("active");
-        const removeActive = (link) => menu_links[link].classList.remove("active");
-        const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => removeActive(link));
-        
-        const sectionMargin = 80;
-        
-        let currentActive = 0;
+        const removeActive = (link) => menu_links[link].classList.remove("active-menu");
+        const removeAllActive = () => [...Array(sections.length).keys()].forEach((link) => {
+          removeActive(link)});
 
-        window.addEventListener("scroll", () => {
-          
-          const current = sections.length - [...sections].reverse().findIndex((section) => window.scrollY >= section.offsetTop - sectionMargin ) - 1
+      sections.forEach((i) => {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach((entry) => {
+                        if(entry.isIntersecting === true){
+                            try {
+                              removeAllActive();
+                              document.querySelector(`a.menu-item[href="#${i.id}"]`).classList.add("active-menu");
 
-          if (current !== currentActive) {
-            removeAllActive();
-            currentActive = current;
-            makeActive(current);
-          }
-        });
-      }, false);
+                            } catch (e) {
+                            }
+                        }
+                    })
+                }, { threshold: [0.2] });
 
-      //Changing Active Menu Item on Pge scroll End ........................................................
+                observer.observe(i);
+
+            })
+
+      //Changing Active Menu Item on Page scroll End ........................................................
 
       //Go Up Button Start ........................................................
 
@@ -742,7 +844,7 @@
 
       //Smoth Move Start ........................................................
 
-      document.querySelector(document).ready(function(){
+      document.addEventListener("DOMContentLoaded", () =>{
         document.querySelector("a").addEventListener('click', function(event) {
 
         if (this.hash !== "") {
@@ -761,6 +863,23 @@
       });
 
       //Smoth Move End ........................................................
+
+      //Menu Opening and Closing Start ........................................................
+
+        function openMenu() {
+        var state = document.querySelector(".mobile-menu");
+        console.log(state.style.display)
+        if (state.style.display == "block") {
+          state.style.display = "none";
+          // state.style.animation = "smoothOpen 2s linear";
+        } else {
+          state.style.display = "block";
+          // state.style.animation = "smoothClose 2s linear";
+        }
+      };
+
+      //Menu Opening and Closing End ........................................................
+
 
     </script>
   </body>
