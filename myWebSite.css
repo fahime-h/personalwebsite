@@ -1005,10 +1005,10 @@ header ul {
     font-size: 12px;
   }
   .transparent-text {
-    font-size: 5rem;
+    font-size: 5rem !important;
   }
   .titles h2 {
-    font-size: 2rem;
+    font-size: 2rem !important;
   }
 }
 
