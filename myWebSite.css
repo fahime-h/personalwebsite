@@ -20,7 +20,7 @@ ul {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 ::-webkit-scrollbar {
@@ -861,15 +861,15 @@ header ul {
 
 
 @media only screen and (max-width: 960px) {
-  body {
+  /* body {
     font-size: 15px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 860px) {
-  body {
+  /* body {
     font-size: 14px;
-  }
+  } */
   header {
     display: block;
   }
@@ -901,9 +901,9 @@ header ul {
 }
 
 @media only screen and (max-width: 660px) {
-  body {
+  /* body {
     font-size: 12px;
-  }
+  } */
   .four-section-grid {
     display: grid;
     grid-template-columns: 100%;
