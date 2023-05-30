@@ -964,7 +964,7 @@ header ul {
   }
 } */
 
-@media (min-width: 300px) and (max-width: 360px) {
+@media (min-width: 200px) and (max-width: 360px) {
   html {
     font-size: 12px;
   }
