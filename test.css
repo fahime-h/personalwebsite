@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+h2 {
+    font-size: 7rem;
+    opacity: .2;
+    text-transform: uppercase;
+}
+p {
+    position: absolute;
+    font-size: 2.1rem;
+}
+span {
+    width: 40px;
+    height: 3px;
+    background-color: aqua;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

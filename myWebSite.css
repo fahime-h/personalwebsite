@@ -231,6 +231,39 @@ body {
   padding-bottom: 5em;
 }
 
+.overlab-text-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.overlab-text-container h2 {
+  color: #6c757d;
+  opacity: .15;
+  font-weight: 600;
+  font-size: 7rem;
+  text-transform: uppercase;
+}
+
+.overlab-text-container p {
+  position: absolute;
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+.overlab-text-container span {
+  display: block;
+  width: 6em;
+  height: 3px;
+  background-color: #20c997;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .overlab-texts {
   position: relative;
 }
@@ -970,6 +1003,12 @@ header ul {
 @media (min-width: 10px) and (max-width: 360px) {
   html {
     font-size: 12px;
+  }
+  .transparent-text {
+    font-size: 5rem;
+  }
+  .titles h2 {
+    font-size: 2rem;
   }
 }
 
