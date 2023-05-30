@@ -951,7 +951,7 @@ header ul {
     justify-content: center;
   }
   .transparent-text {
-    display: none;
+    opacity: 0;
   }
 }
 
