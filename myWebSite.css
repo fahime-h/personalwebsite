@@ -965,7 +965,10 @@ header ul {
 
 @media (min-width: 300px) and (max-width: 360px) {
   html {
-    font-size: 11px;
+    font-size: 12px;
+  }
+  .transparent-text {
+    font-size: 4rem !important;
   }
 }
 
