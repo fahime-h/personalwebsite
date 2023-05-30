@@ -238,7 +238,7 @@ body {
   color: #6c757d;
   opacity: .1;
   font-weight: 600;
-  font-size: 7em;
+  font-size: 7rem;
   text-align: center;
   text-transform: uppercase;
   padding-top: 50px;
@@ -861,15 +861,15 @@ header ul {
 
 
 @media only screen and (max-width: 960px) {
-  /* body {
+  body {
     font-size: 15px;
-  } */
+  }
 }
 
 @media only screen and (max-width: 860px) {
-  /* body {
+  body {
     font-size: 14px;
-  } */
+  }
   header {
     display: block;
   }
@@ -901,9 +901,9 @@ header ul {
 }
 
 @media only screen and (max-width: 660px) {
-  /* body {
+  body {
     font-size: 12px;
-  } */
+  }
   .four-section-grid {
     display: grid;
     grid-template-columns: 100%;
@@ -963,9 +963,9 @@ header ul {
   }
 } */
 
-@media only screen and (max-width: 360px) {
-  .transparent-text {
-    display: none;
+@media (min-width: 300px) and (max-width: 360px) {
+  html {
+    font-size: 11px;
   }
 }
 
