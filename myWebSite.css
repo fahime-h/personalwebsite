@@ -950,6 +950,9 @@ header ul {
     align-items: center;
     justify-content: center;
   }
+  .transparent-text {
+    display: none;
+  }
 }
 
 /* @media only screen and (max-width: 660px) {
@@ -964,14 +967,12 @@ header ul {
   }
 } */
 
-@media (min-width: 10px) and (max-width: 500px) {
+@media (min-width: 10px) and (max-width: 360px) {
   html {
     font-size: 12px;
   }
-  .transparent-text {
-    font-size: 4rem !important;
-  }
 }
+
 
 footer {
   height: 7vh;
