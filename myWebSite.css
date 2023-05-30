@@ -951,7 +951,7 @@ header ul {
   }
 }
 
-@media only screen and (max-width: 660px) {
+/* @media only screen and (max-width: 660px) {
   .about-me {
     height: 100vh;
   }
@@ -961,7 +961,7 @@ header ul {
   .contact {
     height: calc(100vh - 7vh);
   }
-}
+} */
 
 @media only screen and (max-width: 360px) {
   .transparent-text {
