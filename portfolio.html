@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahime Honari - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" href="./images/f.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Fahime Honari</h1>
+        <a class="back-link" href="./index.html">
+            <span>Back</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#20c997" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+        </a>
+    </header>
+    <h2>Portfolio</h2>
+    <div class="gallery">
+        <ul class="gallery-filter js-filter">
+            <li class="active"><a href="#" data-filter=".all">All</a></li>
+            <li><a href="#" data-filter=".cat1">Front-End</a></li>
+            <li><a href="#" data-filter=".cat2">UI</a></li>
+            <li><a href="#" data-filter=".cat3">Photoshop</a></li>
+        </ul>
+        <ul class="gallery-list js-gallery">
+            <li class="gallery-item all cat1 cat2">
+                <a href="#" data-original-width="800" data-original-height="1200" data-caption="Test 1">
+                    <img src="./images/login.png" width="400" height="600" alt="Login Page">
+                    <p><span>Login Page</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+            <li class="gallery-item all cat1">
+                <a href="" data-original-width="1200" data-original-height="800" data-caption="Test 2">
+                    <img src="./images/clock.png" width="600" height="560" alt="Clock">
+                    <p><span>Clock</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+            <li class="gallery-item all cat1 cat2">
+                <a href="" data-original-width="800" data-original-height="1200">
+                    <img src="./images/signUp.png" width="400" height="180" alt="Sign Up Page">
+                    <p><span>Sign Up Page</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+            <li class="gallery-item all cat1">
+                <a href="" data-original-width="1200" data-original-height="800">
+                    <img src="./images/movingBackground.png" width="600" height="200" alt="Text with Clip Background">
+                    <p><span>Clip Background Text</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+            <li class="gallery-item all cat3">
+                <a href="" data-original-width="800" data-original-height="1200">
+                    <img src="./images/photoshop1.jpg" width="400" height="600" alt="Fruit Juice Package">
+                    <p><span>Fruit Juice Package</span></br>Click to see more details...&#128521</p>
+                </a>
+                </li>
+            <li class="gallery-item all cat1">
+                <a href="" data-original-width="1200" data-original-height="800">
+                    <img src="./images/imageSlider.png" width="600" height="275" alt="Carousel">
+                    <p><span>Carousel</span></br>Click to see more details...&#128521</p>
+                </a>
+                </li>
+            <li class="gallery-item all cat1 cat2">
+                <a href="" data-original-width="800" data-original-height="800">
+                    <img src="./images/day-night-toggle.png" width="400" height="340" alt="Day and Night Toggle">
+                    <p><span>Day and Night Toggle</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+            <li class="gallery-item all cat1">
+                <a href="" data-original-width="800" data-original-height="800">
+                    <img src="./images/expanding-flex-cards.png" width="400" height="400" alt="Expanding Flex Cards">
+                    <p><span>Expanding Flex Cards</span></br>Click to see more details...&#128521</p>
+                </a>
+                </li>
+            <li class="gallery-item all cat1">
+                <a class="a"  href="" data-original-width="800" data-original-height="800">
+                    <img src="./images/navigation-animations.png" width="400" height="400" alt="Navigation Animations">
+                    <p><span>Navigation Animations</span></br>Click to see more details...&#128521</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>Copyright © 2023 <span>Fahime</span>. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        (function($) {
+    var $gallery = $('.js-gallery');
+    var $filter  = $('.js-filter');
+    var $isotope = $gallery.isotope();
+
+    var filter	= '.all';
+    var items	= [];
+    var options = {
+        getThumbBoundsFn: function(index) {
+            var _img	= $gallery.find(filter).eq(index).find('img')[0];
+            var _rect	= _img.getBoundingClientRect();
+            var _scroll = window.pageYOffset || document.documentElement.scrollTop;
+            return {x:_rect.left, y:_rect.top + _scroll, w:_rect.width};
+        },
+    };
+    
+    // Generate PID (Use for history)
+    $gallery.find('.gallery-item').each(function(i, el) {
+    	var index = i+1; // Do this fo
+        var $link = $(el).find('a');
+    	$link.attr('data-pid', index);
+    });
+	
+    // Update Items on loaded
+    updateItems(filter);
+	
+    // Bind click event to a tag for get index then open Gallery
+    $gallery.on('click', 'a', function(event) {
+        event.preventDefault();
+        
+        options.index = $(this).parent('.gallery-item').index(filter);
+        openGallery(items, options);
+    });
+	
+    // Bind click event to a tag for filter gallery by isotope then update items object
+    $filter.on('click', 'a', function(event) {
+    	event.preventDefault();
+        
+        filter = this.dataset.filter;
+        $isotope.isotope({
+            filter: filter
+        });
+        updateItems(filter);
+        
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+    });
+    
+    // Open image from hash
+    if (window.location.hash) {
+        var hash = window.location.hash;
+        var params = hash.split('&');
+        var pid;
+        params.forEach(function(el, i) {
+            var param = el.split('=');
+            if (param[0] === 'pid') {
+                pid = param[1];
+            }
+        });
+        options.index = Number(pid - 1);
+        openGallery(items, options);
+    }
+	
+    // Open gallery with items object and options
+    function openGallery(items, options) {
+        var markup = $('.pswp').get(0);
+        var gallery = new PhotoSwipe( markup, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    }
+	
+    // Update items object with filter select by class
+    function updateItems(selector) {
+        items = [];
+        $gallery.find(selector).each(function(idx, el) {
+            var _link	= $(el).find('a').get(0);
+            var source	= _link.href;
+            var width	= _link.dataset.originalWidth;
+            var height	= _link.dataset.originalHeight;
+            var caption = _link.dataset.caption;
+            var pid		= _link.dataset.pid;
+            var item	= {
+                src: source,
+                w: width,
+                h: height,
+                title: caption,
+                msrc: source,
+                pid: pid,
+            }
+            items.push(item);
+        });
+    }
+})(jQuery);
+    </script>
+</body>
+</html>

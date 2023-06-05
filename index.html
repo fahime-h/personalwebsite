@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fahime Honari - Personal Website</title>
     <link rel="stylesheet" href="myWebSite.css" />
-    <link rel="icon" href="./images/fffff.png">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="icon" href="./images/f.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script>
   </head>
   <body>
+    <!-- mobile header and menu -->
     <header>
       <div class="header-inside">
         <div class="mobile-menu">
@@ -89,7 +93,7 @@
             </li>
           </ul>
           <button id="open-menu-btn" onclick="openMenu()">
-            <svg class="ham hamRotate ham4" stroke="red" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+            <svg class="ham hamRotate ham1" stroke="red" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
               <path
                     class="line top"
                     d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
@@ -104,6 +108,7 @@
         </div>
       </div>
     </header>
+    <!-- desktop menu -->
     <div class="left-container">
       <div class="pic-name">
         <img
@@ -181,6 +186,7 @@
       </div>
     </div>
     <div class="right-container">
+      <!-- back to up button -->
       <a id="go-up-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -188,12 +194,12 @@
           width="18"
           viewBox="0 0 448 512"
         >
-          <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
           <path
             d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
           />
         </svg>
       </a>
+      <!-- home section -->
       <section class="home" id="home" data-menu="item">
         <p>Welcome</p>
         <div class="typing-container"></div>
@@ -202,19 +208,10 @@
           <span>Hire Me</span>
         </a>
         <a href="#about-me" class="chevron-down">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#20c997"
-            width="18"
-            viewBox="0 0 320 512"
-          >
-            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path
-              d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
-            />
-          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#20c997" height="1.3em" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
         </a>
       </section>
+      <!-- about me section -->
       <section id="about-me" class="about-me">
         <div class="overlab-text-container">
           <h2>about me</h2>
@@ -265,11 +262,12 @@
             </ul>
             <a class="dl-btn" href="./resume.pdf" download>
               <p>Download CV</p>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="18" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="18" viewBox="0 0 512 512"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
             </a>
           </div>
         </div>
       </section>
+      <!-- what id do section -->
       <section class="what-i-do" id="what-i-do">
         <div class="overlab-text-container">
           <h2>services</h2>
@@ -286,7 +284,6 @@
                 width="32"
                 viewBox="0 0 576 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"
                 />
@@ -295,8 +292,7 @@
             <div class="description">
               <h3>Web Design</h3>
               <p>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                Front-end development is my favorite job. If you need a beautiful, user-friendly and responsive website for your business, contact me. I did this with love for you.
               </p>
             </div>
           </div>
@@ -308,7 +304,6 @@
                 width="32"
                 viewBox="0 0 512 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"
                 />
@@ -317,8 +312,7 @@
             <div class="description">
               <h3>WordPress</h3>
               <p>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                If you are looking for an affordable website for your small business, I can create it for you using WordPress in no time, just send me an email.
               </p>
             </div>
           </div>
@@ -330,17 +324,15 @@
                 width="32"
                 viewBox="0 0 512 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"
                 />
               </svg>
             </div>
             <div class="description">
-              <h3>UI/UX Design</h3>
+              <h3>UI Design</h3>
               <p>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                User interface design has a great impact on attracting customers. A suitable and targeted user interface can play a significant role in the success of your business. I can help you create a user friendly interface, so trust me and send me an email.
               </p>
             </div>
           </div>
@@ -362,13 +354,13 @@
             <div class="description">
               <h3>Photoshop</h3>
               <p>
-                Lisque persius interesset his et, in quot quidam persequeris
-                vim, ad mea essent possim iriure.
+                I can help you to be more successful in attracting customers by designing a beautiful business card or a creative product packaging. Contact me by email for more information.
               </p>
             </div>
           </div>
         </div>
       </section>
+      <!-- resume section -->
       <section id="resume" class="resume">
         <div class="overlab-text-container">
           <h2>summary</h2>
@@ -471,7 +463,7 @@
           </div>
         </div>
       </section>
-      
+      <!-- my work section -->
       <section class="my-work" id="portfolio">
         <div class="overlab-text-container">
           <h2>portfolio</h2>
@@ -479,54 +471,67 @@
               <span></span>
           </p>
         </div>
-        <div class="album-container">
-          <div class="album-menu">
-            <input type="radio" id="select-all" name="album-menu-btn"/>
-            <label for="select-all" class="underline" id="cate">All</label>
-
-            <input type="radio" id="select-fe" name="album-menu-btn"/>
-            <label for="select-fe" id="cate">FrontEnd</label>
-
-            <input type="radio" id="select-uiux" name="album-menu-btn"/>
-            <label for="select-uiux" id="cate">UI/UX</label>
-
-            <input type="radio" id="select-ph" name="album-menu-btn"/>
-            <label for="select-ph" id="cate">Photoshop</label>
-          </div>
-          <ul class="gallery">
-            <li class="select-fe select-uiux">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
-            <li class="select-fe">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
-            <li class="select-fe select-uiux">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
-            <li class="select-fe">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
-            <li class="select-ph">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
-            <li class="select-fe">
-              <a href="#">
-                <p>Click for more details!&#128521</p>
-              </a>
-            </li>
+        <div class="gallery">
+          <ul class="gallery-filter js-filter">
+              <li class="active-cat"><a href="#" data-filter=".all">All</a></li>
+              <li><a href="#" data-filter=".cat1">Front-End</a></li>
+              <li><a href="#" data-filter=".cat2">UI</a></li>
+              <li><a href="#" data-filter=".cat3">Photoshop</a></li>
           </ul>
-        </div>
+          <ul class="gallery-list js-gallery">
+              <li class="gallery-item all cat1 cat2">
+                  <a href="#" data-original-width="800" data-original-height="1200" data-caption="Test 1">
+                      <img src="./images/login.png" width="400" height="600" alt="Login Page">
+                      <p><span>Login Page</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>
+              <li class="gallery-item all cat1">
+                  <a href="" data-original-width="1200" data-original-height="800" data-caption="Test 2">
+                      <img src="./images/clock.png" width="600" height="560" alt="Clock">
+                      <p><span>Clock</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>
+              <li class="gallery-item all cat1 cat2">
+                  <a href="" data-original-width="800" data-original-height="1200">
+                      <img src="./images/signUp.png" width="400" height="180" alt="Sing Up Page">
+                      <p><span>Sign Up Page</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>
+              <li class="gallery-item all cat1">
+                  <a href="" data-original-width="1200" data-original-height="800">
+                      <img src="./images/movingBackground.png" width="600" height="200" alt="Text with Clip Background">
+                      <p><span>Clip Background Text</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>
+              <li class="gallery-item all cat3">
+                  <a href="" data-original-width="800" data-original-height="1200">
+                      <img src="./images/photoshop1.jpg" width="400" height="600" alt="Fruit Juice Package">
+                      <p><span>Fruit Juice Package</span></br>Click to see more details...&#128521</p>
+                  </a>
+                  </li>
+              <li class="gallery-item all cat1">
+                  <a href="" data-original-width="1200" data-original-height="800">
+                      <img src="./images/imageSlider.png" width="600" height="275" alt="Carousel">
+                      <p><span>Carousel</span></br>Click to see more details...&#128521</p>
+                  </a>
+                  </li>
+              <li class="gallery-item all cat1 cat2">
+                  <a href="" data-original-width="800" data-original-height="800">
+                      <img src="./images/day-night-toggle.png" width="400" height="340" alt="Day and Night Toggle">
+                      <p><span>Day and Night Toggle</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>
+              <li class="gallery-item all cat1">
+                  <a href="" data-original-width="800" data-original-height="800">
+                      <img src="./images/expanding-flex-cards.png" width="400" height="400" alt="Expanding Flex Cards">
+                      <p><span>Expanding Flex Cards</span></br>Click to see more details...&#128521</p>
+                  </a>
+              </li>              
+          </ul>
+      </div>        
+        <a href="./portfolio.html" class="my-works-page" target="_blank">Click to see all...&#128527</a>
       </section>
+      <!-- contact section -->
       <section class="contact" id="contact">
         <div class="overlab-text-container">
           <h2>contact</h2>
@@ -543,7 +548,6 @@
                 width="18"
                 viewBox="0 0 384 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
                 />
@@ -557,7 +561,6 @@
                 width="18"
                 viewBox="0 0 512 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
                 />
@@ -571,7 +574,6 @@
                 width="18"
                 viewBox="0 0 512 512"
               >
-                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
                   d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
                 />
@@ -651,6 +653,7 @@
           </div>
         </div>
       </section>
+      <!-- footer -->
       <footer>
         <p>Copyright © 2023 <span>Fahime</span>. All Rights Reserved.</p>
       </footer>
@@ -659,7 +662,7 @@
 
     <script>
 
-      //Typing Text Start ........................................................
+      //Typing Text ........................................................
 
       const texts = [
         "I'm Fahime Honari.",
@@ -720,9 +723,7 @@
       }
       typeWriter(texts, 0, 0);
 
-      //Typing Text End ........................................................
-
-      //Change Menu Items Color On Clicking Start ........................................................
+      //Change Menu Items Color On Clicking ........................................................
 
       document.querySelectorAll("#item").forEach((value) => {
         value.addEventListener("click", (e) => {
@@ -731,48 +732,7 @@
         });
       });
 
-      //Change Menu Items Color On Clicking End ........................................................
-
-      //Underline Menu Items On Clicking Start ........................................................
-
-      document.querySelectorAll("#cate").forEach((value) => {
-        value.addEventListener("click", (e) => {
-          document.querySelector(".underline").classList.toggle("underline");
-          e.target.classList.toggle("underline");
-        });
-      });
-
-      //Underline Menu Items On Clicking End ........................................................
-
-      //Album Filtering Start ........................................................
-
-      document.querySelectorAll('input[name="album-menu-btn"]').forEach(item => {
-            item.addEventListener("change", (e)=> {
-                if (e.target.checked) {
-                    if(e.currentTarget.id == "select-all") {
-                        document.querySelectorAll(`.gallery > li`).forEach(n => {
-                        n.style.opacity = "1"
-                        n.style.transition = "opacity 2s"
-                    });
-                    } else {
-                        document.querySelectorAll(`.gallery > li:is(.${e.currentTarget.id})`).forEach(n => {
-                        n.style.opacity = "1"
-                        n.style.transition = "opacity 2s"
-                    });
-                    let a = document.querySelectorAll(`.gallery > li:not(.${e.currentTarget.id})`);
-                    a.forEach(m => {
-                        m.style.opacity = ".1"
-                        m.style.transition = "opacity 1s"
-                    }) 
-                    }
-                  
-                }   
-            })
-      })
-
-      //Album Filtering End ........................................................
-
-      //Changing Active Menu Item on Page scroll Start ........................................................
+      //Changing Active Menu Item on Page scroll ........................................................
 
         const sections = document.querySelectorAll("section");
         const menu_links = document.querySelectorAll("a.menu-item");
@@ -800,9 +760,7 @@
 
             })
 
-      //Changing Active Menu Item on Page scroll End ........................................................
-
-      //Go Up Button Start ........................................................
+      //Go Up Button ........................................................
 
       var btn = document.getElementById("go-up-btn");
 
@@ -832,9 +790,7 @@
         style.transition = " scrollTop 2s";
       });
 
-      //Go Up Button End ........................................................
-
-      //Smoth Move Start ........................................................
+      //Smoth Move ........................................................
 
       document.addEventListener("DOMContentLoaded", () =>{
         document.querySelector("a").addEventListener('click', function(event) {
@@ -854,9 +810,7 @@
           });
       });
 
-      //Smoth Move End ........................................................
-
-      //Menu Opening and Closing Start ........................................................
+      //Menu Opening and Closing ........................................................
 
         function openMenu() {
         var state = document.querySelector(".mobile-menu");
@@ -870,8 +824,96 @@
         }
       };
 
-      //Menu Opening and Closing End ........................................................
+      //Filter Gallery ........................................................
 
+      (function($) {
+        var $gallery = $('.js-gallery');
+        var $filter  = $('.js-filter');
+        var $isotope = $gallery.isotope();
+
+        var filter	= '.all';
+        var items	= [];
+        var options = {
+            getThumbBoundsFn: function(index) {
+                var _img	= $gallery.find(filter).eq(index).find('img')[0];
+                var _rect	= _img.getBoundingClientRect();
+                var _scroll = window.pageYOffset || document.documentElement.scrollTop;
+                return {x:_rect.left, y:_rect.top + _scroll, w:_rect.width};
+            },
+        };
+    
+        // Generate PID (Use for history)
+        $gallery.find('.gallery-item').each(function(i, el) {
+          var index = i+1; // Do this fo
+          var $link = $(el).find('a');
+          $link.attr('data-pid', index);
+        });
+    
+        // Update Items on loaded
+        updateItems(filter);
+    
+        // Bind click event to a tag for get index then open Gallery
+        $gallery.on('click', 'a', function(event) {
+          event.preventDefault();
+          options.index = $(this).parent('.gallery-item').index(filter);
+          openGallery(items, options);
+        });
+    
+        // Bind click event to a tag for filter gallery by isotope then update items object
+        $filter.on('click', 'a', function(event) {
+          event.preventDefault();
+          filter = this.dataset.filter;
+          $isotope.isotope({
+            filter: filter
+          });
+          updateItems(filter);
+          $(this).parent('li').addClass('active-cat').siblings().removeClass('active-cat');
+        });
+      
+        // Open image from hash
+        if (window.location.hash) {
+          var hash = window.location.hash;
+          var params = hash.split('&');
+          var pid;
+          params.forEach(function(el, i) {
+              var param = el.split('=');
+              if (param[0] === 'pid') {
+                pid = param[1];
+              }
+          });
+          options.index = Number(pid - 1);
+          openGallery(items, options);
+        }
+    
+        // Open gallery with items object and options
+        function openGallery(items, options) {
+          var markup = $('.pswp').get(0);
+          var gallery = new PhotoSwipe( markup, PhotoSwipeUI_Default, items, options);
+          gallery.init();
+        }
+    
+        // Update items object with filter select by class
+        function updateItems(selector) {
+          items = [];
+          $gallery.find(selector).each(function(idx, el) {
+            var _link	= $(el).find('a').get(0);
+            var source	= _link.href;
+            var width	= _link.dataset.originalWidth;
+            var height	= _link.dataset.originalHeight;
+            var caption = _link.dataset.caption;
+            var pid		= _link.dataset.pid;
+            var item	= {
+              src: source,
+              w: width,
+              h: height,
+              title: caption,
+              msrc: source,
+              pid: pid,
+            }
+            items.push(item);
+          });
+        }
+      })(jQuery);
 
     </script>
   </body>
