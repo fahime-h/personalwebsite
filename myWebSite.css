@@ -960,6 +960,7 @@ header ul {
     display: flex;
     flex-direction: column;
     padding: 0 50px;
+    gap: 20px;
   }
   .about-me {
     padding-left: 3vw;
