@@ -348,6 +348,10 @@ ul {
   padding-right: 5em;
 }
 
+.my-work .overlab-text-container {
+  padding-bottom: 40px !important;
+}
+
 .four-section-grid {
   display: grid;
   grid-template-columns: 47% 47%;
@@ -999,11 +1003,23 @@ header ul {
   .input-flex {
     flex-direction: column;
   }
+  .contact-message {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
   .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+  }
+  #message {
+    margin-top: .8em;
+  }
+  .message-box {
+    width: 90%;
   }
 }
 
