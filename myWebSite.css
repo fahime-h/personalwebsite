@@ -139,7 +139,7 @@ ul {
 }
 
 .home {
-  height: 100vmin;
+  height: 100svh;
   background-image: url(./images/home.jpg);
   background-size: cover;
   background-position: center;
