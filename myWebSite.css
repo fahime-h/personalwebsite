@@ -568,8 +568,10 @@ ul {
   font-weight: 400;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none;
+  opacity: 0;
   padding: 5px 2px;
+  transition: opacity .8s linear;
+  z-index: 99;
 }
 
 .gallery-item p span {
@@ -584,8 +586,7 @@ ul {
 }
 
 .gallery-item:hover p{
-  display: block;
-  transition: .5s ease-in-out;
+  opacity: 1;
 }
 
 .gallery-item img {
