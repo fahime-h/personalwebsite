@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #faebd7;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #cfcbcb;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #757373;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #474646;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.container .item:first-child {
+    background-image: url(./images/spring.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(2) {
+    background-image: url(./images/summer.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(3) {
+    background-image: url(./images/autunm.jpeg);
+    background-size: cover;
+}
+
+.container div:nth-child(4) {
+    background-image: url(./images/winter.jpeg);
+    background-size: cover;
+}
+
+.item {
+    width: 100px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: transparent;
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.active {
+    width: 300px;
+    height: 500px;
+}
+
+.title {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    border-radius: 0 0 20px 20px;
+    padding: 15px 0;
+}
+
+.open {
+    animation: open 1.5s linear;
+}
+
+.close {
+    animation: close 1.5s linear;
+}
+
+@keyframes open {
+    from {width: 100px;}
+    to {width: 300px;}
+}
+
+@keyframes close {
+    from {width: 300px;}
+    to {width: 100px;}
+}
+
+@keyframes open-verticaly {
+    from {height: 120px;}
+    to {height: 500px;}
+}
+
+@keyframes close-verticaly {
+    from {height: 500px;}
+    to {height: 120px;}
+}
+
+@keyframes open-verticaly-300 {
+    from {height: 100px;}
+    to {height: 400px;}
+}
+
+@keyframes close-verticaly-300 {
+    from {height: 400px;}
+    to {height: 100px;}
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .item {
+        height: 120px;
+        width: 90vw;
+    }
+    .active {
+        height: 500px;
+    }
+    .open {
+        animation: open-verticaly 1.5s linear;
+    }
+    .close {
+        animation: close-verticaly 1.5s linear;
+    }
+    .container div {
+        background-position: center;
+    }
+    .title {
+        background-color: initial;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .item {
+        height: 100px;
+        width: 90vw;
+    }
+    .active {
+        height: 400px;
+    }
+    .open {
+        animation: open-verticaly-300 1.5s linear;
+    }
+    .close {
+        animation: close-verticaly-300 1.5s linear;
+    }
+    .container div {
+        background-position: center;
+    }
+    .title {
+        background-color: initial;
+    }
+}
+

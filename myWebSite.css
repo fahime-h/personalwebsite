@@ -24,7 +24,7 @@ ul {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -140,13 +140,15 @@ ul {
 
 .home {
   height: 100vh;
-  background-image: url(./images/home.jpg);
+  background-image: url(./images/home-min.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
+  position: relative;
 }
 
 .home p, .typing-text-flex {
@@ -158,7 +160,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(160px);
+  /* transform: translateY(160px); */
 }
 
 .home p:nth-child(1) {
@@ -236,14 +238,18 @@ ul {
   margin: 0 auto;
   animation: updown 1.7s ease infinite;
   margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
 }
 
 @keyframes updown {
   0% {
-    transform: translateY(-8px);
+    opacity: .4;
+    transform: translateY(-5px);
   }
 
   100% {
+    opacity: 1;
     transform: translateY(30px);
   }
 }
@@ -574,52 +580,70 @@ ul {
 
 .gallery-item a {
   position: relative;
-  width: fit-content;
+  /* width: fit-content; */
   display: block;
   transition: filter .5s linear;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-list li:first-child a {
+  background-image: url(./images/login-min.png);
+}
+
+.gallery-list li:nth-child(2) a {
+  background-image: url(./images/clock-min.png);
+}
+
+.gallery-list li:nth-child(3) a {
+  background-image: url(./images/gallery-min.png);
+}
+
+.gallery-list li:nth-child(4) a {
+  background-image: url(./images/movingBackground-min.png);
+}
+
+.gallery-list li:nth-child(5) a {
+  background-image: url(./images/photoshop1-min.jpg);
+}
+
+.gallery-list li:nth-child(6) a {
+  background-image: url(./images/imageSlider-min.png);
+}
+
+.gallery-list li:nth-child(7) a {
+  background-image: url(./images/day-night-toggle-min.png);
+}
+
+.gallery-list li:nth-child(8) a {
+  background-image: url(./images/expanding-flex-cards-min.png);
 }
 
 .gallery-item p {
-  width: 100%;
+  width: 100.5%;
+  height: 100.5%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: .8rem;
-  font-weight: 400;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  padding: 5px 2px;
-  transition: opacity .8s linear;
-  z-index: 99;
-}
-
-.gallery-item p span {
-  color: #20c997;
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 600;
-}
-
-.gallery-item img:hover {
-  scale: 110%;
-  filter: blur(1.3px);
+  text-align: center;
+  opacity: 0;
+  transition: opacity .9s;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px) brightness(.5);
 }
 
 .gallery-item:hover p{
   opacity: 1;
-}
-
-.gallery-item img {
-  display: block;
-  transition: scale .8s linear, filter .8s linear;
-}
-
-.gallery img {
-  max-width: 100%;
-  height: auto;
 }
 
  .my-works-page {

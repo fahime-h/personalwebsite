@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #cfcbcb;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #757373;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #474646;
+}
+
+::placeholder {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  min-height: 600px;
+  background: url(./images/city-background-min.jpg) no-repeat;
+  background-size: cover;
+}
+
+.container {
+    background-color: rgba(255,255,255,.2);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+  width: 500px;
+  height: 400px;
+  background-image: linear-gradient(#7579ff, #b224ef);
+  border-radius: 10px;
+  padding: 30px 55px;
+  margin: 20px 0;
+}
+
+.login-form {
+    width: 100%;
+    height: 100%;
+}
+
+.user-photo {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-90px);
+    border: #7579ff 1.5px solid;
+}
+
+.form-title {
+    color: white;
+    font-family: 'Monoton', 'cursive';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2em;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: -70px;
+    padding: 15px 0;
+}
+
+.input-container {
+    border-bottom: rgba(255, 255, 255, .24) solid 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+input {
+    background-color: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 45px;
+    padding: 0 5px 0 10px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1em;
+}
+
+.required-input {
+    color: #c80000;
+    font-size: 12px;
+    background-color: white;
+    border: #c80000 1px solid;
+    border-radius: 5px;
+    padding: 5px 20px 5px 10px;
+    position: absolute;
+    right: 0%;
+    display: none;
+}
+
+.exclamation-icon {
+    z-index: 99;
+    position: absolute;
+    right: -2%;
+    display: none;
+}
+
+.exclamation-icon-show {
+    display: block;
+}
+
+.exclamation-icon:hover + .required-input {
+    display: block;
+}
+
+.checkbox-container {
+    position: relative;
+    padding-bottom: 22px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.check-mark-icon {
+    z-index: 99;
+    position: absolute;
+    top: 13%;
+    left: 1.9px;
+    display: none;
+}
+
+.new-check-mark-style {
+    display: block;
+}
+
+label {
+    color: white;
+    font-size: .72em;
+    padding-left: 29px;
+    position: relative;
+    cursor: pointer;
+}
+
+label::before {
+    content: "\f26b";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 2px;
+    position: absolute;
+    top: 13%;
+    left: 3px;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: white;
+    border: none;
+    color: #555;
+    font-size: 1em;
+    /* width: 120px;
+    height: 50px; */
+    width: 28%;
+    aspect-ratio: 2.4 / 1;
+    border-radius: 25px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all .9s linear;
+}
+
+button:hover {
+    background: linear-gradient(#b224ef, #7579ff);
+    color: white;
+}
+
+.forget {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.forget a {
+    color: white;
+    font-size: .8em;
+    transition: all .5s linear;
+}
+
+.forget a:hover {
+    color: #7579ff;
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+.new-input-container {
+    border-bottom: white solid 2px;
+    transition: ease-in-out .5s;
+}
+
+.icon-new-style1 {
+    position: absolute;
+    bottom: 85%;
+    transition: linear .5s;
+}
+
+.icon-new-style2 {
+    width: 17px;
+    height: 17px;
+    transition: all .3s;
+}
+
+.input-new-style {
+    padding-left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    .form-container {
+        width: 300px;
+    }
+    button {
+        padding: 0;
+        width: 42%;
+    }
+}

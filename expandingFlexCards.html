@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahime Honari - Expanding Flex Cards</title>
+    <link rel="icon" href="./images/f.png">
+    <link rel="stylesheet" href="./expandingFlexCards.css">
+</head>
+<body>
+    <div class="container">
+        <div class="item active">
+            <div class="title">
+                <img src="./images/spring.png" width="50" alt="spring">
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">
+                <img src="./images/summer.png" width="50" alt="summer">
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">
+                <img src="./images/autumn.png" width="50" alt="autumn">
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">
+                <img src="./images/winter.png" width="50" alt="winter">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll(".item").forEach((value) => {
+        value.addEventListener("click", (e) => {
+            if (!e.target.classList.contains("active")) {
+                document.querySelector(".item.close")?.classList.remove("close");
+                document.querySelector(".item.open")?.classList.remove("open");
+                document.querySelector(".item.active").classList.add("close");
+                document.querySelector(".item.active").classList.remove("active");
+                e.target.closest(".item").classList.add("active");
+                e.target.closest(".item").classList.toggle("open");
+            }
+        });
+      });
+
+    </script>
+</body>
+</html>

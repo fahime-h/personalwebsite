@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(191, 213, 252);
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #cfcbcb;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #757373;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #474646;
+  }
+
+.background-container {
+    display: flex;
+    /* width: 900px; */
+    width: 75%;
+    height: 550px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgb(138, 170, 226) 0px 2px 8px 0px;
+    padding: 50px 0;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.left-container a {
+    font-size: 13.5px;
+    color: rgb(77, 106, 145);
+}
+
+.left-container a:hover {
+    color: rgb(59 89 152);
+    font-weight: 500;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(95, 122, 157);
+    padding-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #7f94b0;
+    border-radius: 10px;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container svg {
+    margin-left: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 315px;
+}
+
+::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.checkbox-container {
+    position: relative;
+    margin-top: -10px;
+}
+
+.checkbox-container svg {
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    z-index: 99;
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+.checkbox {
+    display: none;
+}
+
+label {
+    font-size: 12px;
+    padding-left: 35px;
+    cursor: pointer;
+}
+
+label::before {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border: 1px solid rgb(127, 148, 176);
+    border-radius: 2px;
+    position: absolute;
+    top: 27%;
+    left: 13px;
+    cursor: pointer;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background: rgb(59 89 152);
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow .7s;
+}
+
+button:hover {
+    box-shadow: rgb(40, 113, 240) 0px 2px 8px 0px;
+}
+
+.social-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-signup span {
+    font-size: 13.5px;
+}
+
+.social-signup svg {
+    cursor: pointer;
+}
+
+.login-link {
+    position: absolute;
+    bottom: 110px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(77, 106, 145);
+    font-size: 14px;
+    display: none;
+}
+
+.login-link:hover {
+    color: rgb(59 89 152);
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1100px) {
+    .left-container {
+        display: none;
+    }
+    .right-container {
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+    }
+    form {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .login-link {
+        display: block;
+    }
+}
+
+
+
+
+

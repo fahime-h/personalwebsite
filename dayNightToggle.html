@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahime Honari - Day & Night Toggle</title>
+    <link rel="icon" href="./images/f.png">
+    <link rel="stylesheet" href="dayNightToggle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn bg day-bg">
+            <div class="day block">
+                <div class="day-c1"></div>
+                <div class="day-c2"></div>
+                <div class="day-c3"></div>
+            </div>
+            <div class="toggle day-toggle">
+                <div class="moon-holes none">
+                    <div class="sc1"></div>
+                    <div class="sc2"></div>
+                    <div class="sc3"></div>
+                </div>
+            </div>
+            <div class="night none">
+                <div class="night-c1"></div>
+                <div class="night-c2"></div>
+                <div class="night-c3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".container").addEventListener('click', function(event) {
+            var element = document.querySelector(".btn");
+            if (element.classList.contains("day-bg")) {
+                document.querySelector(".bg").classList.remove("day-bg");
+                document.querySelector(".bg").classList.add("night-bg");
+                document.querySelector(".toggle").classList.remove("day-toggle");
+                document.querySelector(".toggle").classList.add("night-toggle");
+                document.querySelector(".toggle").classList.remove("transform-l");
+                document.querySelector(".toggle").classList.add("transform-r");
+                document.querySelector(".day").classList.remove("block");
+                document.querySelector(".day").classList.add("none");
+                document.querySelector(".night").classList.remove("none");
+                document.querySelector(".night").classList.add("block");
+                document.querySelector(".moon-holes").classList.remove("none");
+                document.querySelector(".moon-holes").classList.add("block");
+            } 
+            else {
+                document.querySelector(".bg").classList.remove("night-bg");
+                document.querySelector(".bg").classList.add("day-bg");
+                document.querySelector(".toggle").classList.remove("night-toggle");
+                document.querySelector(".toggle").classList.add("day-toggle");
+                document.querySelector(".toggle").classList.remove("transform-r");
+                document.querySelector(".toggle").classList.add("transform-l");
+                document.querySelector(".day").classList.remove("none");
+                document.querySelector(".day").classList.add("block");
+                document.querySelector(".night").classList.remove("block");
+                document.querySelector(".night").classList.add("none");
+                document.querySelector(".moon-holes").classList.remove("block");
+                document.querySelector(".moon-holes").classList.add("none");
+            }
+
+        });
+        
+    </script>
+</body>
+</html>

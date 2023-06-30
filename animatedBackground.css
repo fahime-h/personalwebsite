@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        
+body {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 208, 216);
+}
+
+html {
+    font-size: 16px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #cfcbcb;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #757373;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #474646;
+}
+
+.container {
+    width: 100%;
+}
+
+.html {
+    font-size: 16px;
+}
+        
+h1 {
+    background-image: url("./images/background.webp");
+    background-size: contain;
+    font-size: 5em;
+    text-align: center;
+    color: transparent;
+    font-family: 'Braah One', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    -webkit-background-clip: text;
+    animation: stripes 5s infinite alternate;
+}
+
+@keyframes stripes {
+    100% {
+        background-position: 100px 0, 100px 0, 100px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .html {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 3.5em;
+    }
+}

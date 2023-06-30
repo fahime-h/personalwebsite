@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahime Honari - Autoplay Carousel</title>
+    <link rel="icon" href="./images/f.png">
+    <link rel="stylesheet" href="./carousel.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slides-container">
+            <div class="slides slide1 show">
+                <div class="text-container">
+                    <div class="caption">best places to travel in 2023</div>
+                    <div class="name">italy</div>
+                </div>
+            </div>
+            <div class="slides slide2">
+                <div class="text-container">
+                    <div class="caption">best places to travel in 2023</div>
+                    <div class="name">japan</div>
+                </div>
+            </div>
+            <div class="slides slide3">
+                <div class="text-container">
+                    <div class="caption">best places to travel in 2023</div>
+                    <div class="name">norway</div>
+                </div>
+            </div>
+            <div class="slides slide4">
+                <div class="text-container">
+                    <div class="caption">best places to travel in 2023</div>
+                    <div class="name">swiss</div>
+                </div>
+            </div>
+        </div>
+        <div class="control-btn">
+            <a class="prev" onclick="prev()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgba(255, 255, 255, .5)" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg>
+            </a>
+            <a class="next" onclick="next()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="rgba(255, 255, 255, .5)" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <!-- java script part -->
+
+    <script>
+        var slides = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("dot");
+        var i = slides.length;
+        function next() {
+            var activeSlide = document.querySelector("div.slides.show");
+            var nextSibling = activeSlide.nextElementSibling;
+            var activeDot = document.querySelector(".dot.active");
+            var nextDot = activeDot.nextElementSibling;
+            activeSlide.classList.remove("show");
+            activeDot.classList.remove("active");
+            if(nextSibling) {
+                nextSibling.classList.add("show");
+            }
+            else {
+                slides[0].classList.add("show");
+            }
+            if(nextDot) {
+                nextDot.classList.add("active");
+            }
+            else {
+                dots[0].classList.add("active");
+            }
+        }
+        function prev() {
+            var activeSlide = document.querySelector("div.slides.show");
+            var prevSibling = activeSlide.previousElementSibling;
+            var activeDot = document.querySelector(".dot.active");
+            var prevDot = activeDot.previousElementSibling;
+            activeSlide.classList.remove("show");
+            activeDot.classList.remove("active");
+            if(prevSibling) {
+                prevSibling.classList.add("show");
+            }
+            else {
+                slides[i-1].classList.add("show");
+            }
+            if(prevDot) {
+                prevDot.classList.add("active");
+            }
+            else {
+                dots[i-1].classList.add("active");
+            }
+        }
+
+
+        let elementsArray = document.querySelectorAll(".dot");
+
+        elementsArray.forEach(function(elem) {
+            elem.addEventListener("click", function(e) {
+                var activeSlide = document.querySelector("div.slides.show");
+                var activeDot = document.querySelector(".dot.active");
+                var target = e.target;
+                console.log(target.offsetWidth);
+                var parent = target.parentNode;
+                var index = [].indexOf.call(parent.children, target);
+                activeSlide.classList.remove("show");
+                slides[index].classList.add("show");
+                activeDot.classList.remove("active");
+                dots[index].classList.add("active");
+            });
+        });
+            
+        // autoplay every 4 seconds
+        setInterval(next, 4000);
+
+    </script>
+
+</body>
+</html>
