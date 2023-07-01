@@ -196,8 +196,9 @@ ul {
 
 .caret {
   display: inline-block;
-  width: .4rem;
-  height: 2.5rem;
+  width: .15em;
+  /* height: 2.5rem; */
+  aspect-ratio: 1 / 5.1;
   background-color: #20c997;
   margin-left: 4px;
   animation: blink 1s infinite;
@@ -216,7 +217,7 @@ ul {
 }
 
 .hire-btn span {
-  padding: .8em 2.2em;
+  padding: .8em 2em;
   border: #20c997 2px solid;
   color: #20c997;
   background: transparent;
@@ -356,7 +357,7 @@ ul {
   color: #fff !important;
   font-size: 1.03em;
   font-weight: 500;
-  width: 12em;
+  width: 11em;
   height: 3em;
   border-radius: 50px;
   margin-top: .9em;
@@ -767,7 +768,7 @@ ul {
  }
 
  .message-box button {
-  width: 12em;
+  width: 10.2em;
   height: 3.4em;
   border-radius: 50px;
   border: none;
