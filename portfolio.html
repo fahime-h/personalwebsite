@@ -14,12 +14,26 @@
 </head>
 <body>
     <header>
-        <h1>Fahime Honari</h1>
+        <a href="./index.html">
+            <h1>Fahime Honari</h1>
+        </a>
         <a class="back-link" href="./index.html">
             <span>Back</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="#20c997" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
         </a>
     </header>
+    <a id="go-up-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#fff"
+          width="18"
+          viewBox="0 0 448 512"
+        >
+          <path
+            d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"
+          />
+        </svg>
+      </a>
     <h2>Portfolio</h2>
     <div class="gallery">
         <ul class="gallery-filter js-filter">
@@ -158,6 +172,36 @@
     </footer>
 
     <script>
+
+    //Go Up Button ........................................................
+
+    var btn = document.getElementById("go-up-btn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    btn.style.visibility = "visible";
+  } else {
+    btn.style.visibility = "hidden";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+btn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  style.transition = " scrollTop 2s";
+});
 
     function address(link) {
         window.open(link, "_blank");

@@ -327,7 +327,7 @@ ul {
 }
 
 .section2 li {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.022em;
   padding: .6em 0;
 }
@@ -365,8 +365,7 @@ ul {
 }
 
 .dl-btn:hover {
-  background-color: #1BAA80;
-  transition: all .5s ease-in-out;
+  background-color: #199771;
  }
 
 .what-i-do, .my-work {
@@ -441,10 +440,10 @@ ul {
 }
 
 .edu p, .expe p {
-  color: #fff;
-  line-height: 1.5;
-  font-weight: 300;
-  font-size: .99em;
+  color: rgba(222, 227, 228, 1);
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: .9em;
 }
 
 .edu, .expe {
@@ -574,7 +573,7 @@ ul {
 .gallery-item {
   float: left;
   width: 33.33%;
-  padding: 5px;
+  padding: 3px;
   overflow: hidden;
 }
 
@@ -782,7 +781,7 @@ ul {
  }
 
  .message-box button:hover {
-  background-color: #1BAA80;
+  background-color: #199771;
  }
 
  #go-up-btn {
@@ -839,7 +838,16 @@ header {
 
 .left-header h1 {
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 600;
+  color: #fff;
+}
+
+.left-header h1:hover {
+  color: #20c997;
+}
+
+.left-header h1:visited {
+  color: #fff;
 }
 
 header ul {
@@ -1092,6 +1100,7 @@ header ul {
 @media (min-width: 10px) and (max-width: 660px) {
   .gallery-item {
     width: 50%;
+    padding: 1.7px;
   }
   .gallery-item img {
     width: 100%;
