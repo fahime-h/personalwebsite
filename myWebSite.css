@@ -935,6 +935,8 @@ header ul {
   color: rgb(250 250 250 / 90%);
   font-size: 1em;
   font-weight: 400;
+  width: 100%;
+  display: block;
 }
 
 .ham {
