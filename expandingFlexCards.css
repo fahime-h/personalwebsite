@@ -5,11 +5,11 @@
 }
 
 body {
-    height: 100vh;
+    height: 100svh;
     display: grid;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     background-color: #faebd7;
 }
 
@@ -35,27 +35,31 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 10px;
+    padding: 50px 10px;
 }
 
 .container .item:first-child {
     background-image: url(./images/spring.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .container div:nth-child(2) {
     background-image: url(./images/summer.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .container div:nth-child(3) {
     background-image: url(./images/autunm.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .container div:nth-child(4) {
     background-image: url(./images/winter.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .item {

@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
         
 body {
-    height: 100vh;
+    height: 100svh;
     display: grid;
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 208, 216);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -61,5 +67,14 @@ h1 {
     }
     h1 {
         font-size: 3.5em;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 310px) {
+    html {
+        font-size: 11px;
+    }
+    h1 {
+        font-size: 3em;
     }
 }

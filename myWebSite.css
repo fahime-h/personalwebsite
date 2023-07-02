@@ -139,7 +139,7 @@ ul {
 }
 
 .home {
-  height: 100vh;
+  height: 100svh;
   background-image: url(./images/home-min.jpg);
   background-size: cover;
   background-position: center;
@@ -1016,7 +1016,7 @@ header ul {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 99;
+    z-index: 9999;
   }
   .left-container {
     display: none;

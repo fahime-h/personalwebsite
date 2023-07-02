@@ -189,10 +189,10 @@ button:hover {
 }
 
 .login-link {
-    position: absolute;
+    /* position: absolute;
     bottom: 110px;
     left: 0;
-    right: 0;
+    right: 0; */
     text-align: center;
     color: rgb(77, 106, 145);
     font-size: 14px;

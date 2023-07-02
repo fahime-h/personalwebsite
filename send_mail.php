@@ -94,6 +94,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 font-size: 1.3em;
                 font-weight: 500;
             }
+            span {
+                color: #20c997;
+            }
             img {
                 width: 40%;
             }
@@ -138,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </head>
     <body>
         <div class="container">
-            <p>Email sent successfully...!</p>
+            <p>Email sent <span>successfully</span>...!</p>
             <img src="./images/email.png" alt="">
             <a href="./index.html#contact">Back</a>
         </div>

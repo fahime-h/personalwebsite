@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +183,7 @@ a:nth-child(5):hover::after {
     }
 }
 
-@media  only screen and (max-width: 700pc) {
+@media  only screen and (max-width: 700px) {
     .menu {
         flex-direction: column;
     }
@@ -192,5 +192,11 @@ a:nth-child(5):hover::after {
 @media  only screen and (max-width: 480px) {
     html {
         font-size: 12px;
+    }
+}
+
+@media  only screen and (min-width: 200px) and (max-width: 350px) {
+    html {
+        font-size: 11px;
     }
 }

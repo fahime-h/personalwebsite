@@ -38,6 +38,17 @@ a {
     font-weight: 400;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 40px #b224ef inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: white;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -46,11 +57,11 @@ body {
   min-height: 600px;
   background: url(./images/city-background-min.jpg) no-repeat;
   background-size: cover;
+  backdrop-filter: blur(2px);
 }
 
 .container {
-    background-color: rgba(255,255,255,.2);
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -60,7 +71,7 @@ body {
 .form-container {
   width: 500px;
   height: 400px;
-  background-image: linear-gradient(#7579ff, #b224ef);
+  background-image: linear-gradient(to top, #7579ff, #b224ef, #b224ef, #b224ef, #7579ff );
   border-radius: 10px;
   padding: 30px 55px;
   margin: 20px 0;
@@ -213,7 +224,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(#b224ef, #7579ff);
+    background: linear-gradient(#7579ff, #b224ef);
     color: white;
 }
 
@@ -256,7 +267,7 @@ button:hover {
     padding-left: 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     html {
         font-size: 12px;
     }
@@ -266,5 +277,11 @@ button:hover {
     button {
         padding: 0;
         width: 42%;
+    }
+}
+
+@media only screen and (min-width: 290px) and (max-width: 400px) {
+    .form-container {
+        width: 270px;
     }
 }

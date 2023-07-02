@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -39,7 +43,7 @@ body {
 
 .slides {
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,22 +54,26 @@ body {
 .slide1 {
     background: url(./images/italy-min.jpeg) no-repeat;
     background-size: cover;
+    background-position: center;
 
 }
 
 .slide2 {
     background: url(./images/japan-min.jpeg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .slide3 {
     background: url(./images/norway-min.jpeg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .slide4 {
     background: url(./images/swiss-min.jpeg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .text-container {
@@ -79,10 +87,11 @@ body {
 }
 
 .caption {
-    font-size: 15px;
+    font-size: .93em;
     font-weight: 500;
     color: #e0c999;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 .name {
@@ -135,6 +144,12 @@ body {
 
 .active {
     background-color: rgb(255, 255, 255);
+}
+
+@media  only screen and (min-width: 200px) and (max-width: 350px) {
+    html {
+        font-size: 11px;
+    }  
 }
 
 

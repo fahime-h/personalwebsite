@@ -47,7 +47,7 @@ ul {
 .title {
     text-align: center;
     letter-spacing: 3px;
-    font-size: 3.5rem;
+    font-size: 3.5em;
     text-transform: uppercase;
     background: -webkit-linear-gradient(#c58f19, #994b1b);
     -webkit-background-clip: text;
@@ -60,7 +60,7 @@ ul {
     justify-content: center;
     gap: .5em;
     margin: 2.5em 0;
-    font-size: 1.04em;
+    font-size: 1.1em;
     font-weight: 400;
 }
 
@@ -171,5 +171,14 @@ ul {
     .gallery {
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 300px) {
+    html {
+        font-size: 9.5px;
+    }
+    .title {
+        font-size: 2.9em;
     }
 }
