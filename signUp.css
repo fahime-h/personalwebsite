@@ -276,6 +276,18 @@ button:hover {
     }
 }
 
+@media only screen and (max-width: 481px) {
+    .checkbox-container svg {
+        top: 2px;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    .checkbox-container svg {
+        left: 5.5px;
+    }
+}
+
 
 
 
