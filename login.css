@@ -57,11 +57,12 @@ body {
   height: 100vh;
   background: url(./images/city-background-min.jpg) no-repeat;
   background-size: cover;
-  backdrop-filter: blur(2px);
+  background-position: center;
+  backdrop-filter: blur(3px);
 }
 
 .container {
-    height: 100svh;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;

@@ -131,7 +131,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 .checkbox-container svg {
     position: absolute;
     top: 5px;
-    left: 12px;
+    left: 7px;
     z-index: 99;
     display: none;
 }
@@ -145,8 +145,8 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 label {
-    font-size: .75em;
-    padding-left: 35px;
+    font-size: .8em;
+    padding-left: 25px;
     cursor: pointer;
 }
 
@@ -155,14 +155,14 @@ label::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13px;
-    height: 13px;
+    width: .8em;
+    aspect-ratio: 1 / 1;
     background-color: white;
     border: 1px solid rgb(127, 148, 176);
     border-radius: 2px;
     position: absolute;
-    top: 27%;
-    left: 13px;
+    top: 30%;
+    left: 9px;
     cursor: pointer;
 }
 
