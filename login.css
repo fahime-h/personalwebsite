@@ -54,7 +54,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-  height: 100svh;
+  height: 100vh;
   background: url(./images/city-background-min.jpg) no-repeat;
   background-size: cover;
   backdrop-filter: blur(2px);
