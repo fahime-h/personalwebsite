@@ -6,9 +6,18 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: rgb(191, 213, 252);
     font-family: 'Poppins', sans-serif;
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
 }
 
 a {
@@ -35,14 +44,14 @@ a {
 .background-container {
     display: flex;
     /* width: 900px; */
-    width: 75%;
+    width: 66.5%;
     height: 550px;
     border-radius: 20px;
     background-color: white;
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     box-shadow: rgb(138, 170, 226) 0px 2px 8px 0px;
     padding: 50px 0;
 }
@@ -52,11 +61,11 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 40%;
 }
 
 .left-container a {
-    font-size: 13.5px;
+    font-size: .85em;
     color: rgb(77, 106, 145);
 }
 
@@ -68,11 +77,17 @@ a {
 .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+.form-container {
+    width: 80%;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 1.9em;
     font-weight: 700;
     color: rgb(95, 122, 157);
     padding-bottom: 20px;
@@ -83,7 +98,7 @@ h1 {
     align-items: center;
     background-color: #7f94b0;
     border-radius: 10px;
-    gap: 10px;
+    /* gap: 10px; */
     margin-bottom: 10px;
 }
 
@@ -98,13 +113,14 @@ input[type="text"], input[type="email"], input[type="password"] {
     color: white;
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
-    padding: 10px 10px;
-    width: 315px;
+    padding: 12px 12px;
+    width: 100%;
 }
 
 ::placeholder {
     font-family: 'Poppins', sans-serif;
     color: white;
+    font-size: 1em;
 }
 
 .checkbox-container {
@@ -129,7 +145,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 label {
-    font-size: 12px;
+    font-size: .75em;
     padding-left: 35px;
     cursor: pointer;
 }
@@ -162,7 +178,7 @@ button {
     padding: 10px 15px;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: .87em;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
@@ -181,7 +197,8 @@ button:hover {
 }
 
 .social-signup span {
-    font-size: 13.5px;
+    font-size: .85em;
+    font-weight: 500;
 }
 
 .social-signup svg {
@@ -204,7 +221,10 @@ button:hover {
     font-weight: 500;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 965px) {
+    html {
+        font-size: 15px;
+    }
     .left-container {
         display: none;
     }
@@ -220,6 +240,39 @@ button:hover {
     }
     .login-link {
         display: block;
+    }
+}
+
+@media only screen and (max-width: 1238px) {
+    .left-container img {
+        content: url(./images/signup2.jpg);
+    }
+}
+
+@media only screen and (max-width: 1115px) {
+    /* .left-container img {
+        content: url(./images/signup2.jpg);
+    } */
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .background-container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
     }
 }
 

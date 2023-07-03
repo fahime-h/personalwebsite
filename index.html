@@ -760,6 +760,8 @@
         value.addEventListener("click", (e) => {
           document.querySelector(".active-menu").classList.toggle("active-menu");
           e.target.classList.toggle("active-menu");
+          // openMenu();
+          setTimeout(openMenu, 100);
         });
       });
 
@@ -780,6 +782,31 @@
                             try {
                               removeAllActive();
                               document.querySelector(`a.menu-item[href="#${i.id}"]`).classList.add("active-menu");
+
+                            } catch (e) {
+                            }
+                        }
+                    })
+                }, { threshold: [0.2] });
+
+                observer.observe(i);
+
+            })
+
+        const mobile_menu_links = document.querySelectorAll("a#item");
+        console.log(menu_links);
+        
+        const removeActiveMobile = (link) => mobile_menu_links[link].classList.remove("active-menu");
+        const removeAllActiveMobile = () => [...Array(sections.length).keys()].forEach((link) => {
+          removeActiveMobile(link)});
+
+      sections.forEach((i) => {
+                var observer = new IntersectionObserver(function(entries) {
+                    entries.forEach((entry) => {
+                        if(entry.isIntersecting === true){
+                            try {
+                              removeAllActiveMobile();
+                              document.querySelector(`a#item[href="#${i.id}"]`).classList.add("active-menu");
 
                             } catch (e) {
                             }
@@ -824,17 +851,15 @@
       //Smoth Move ........................................................
 
       document.addEventListener("DOMContentLoaded", () =>{
-        document.querySelector("a").addEventListener('click', function(event) {
-
+        document.querySelector("#item").addEventListener('click', function(event) {
         if (this.hash !== "") {
           event.preventDefault();
 
           var hash = this.hash;
 
-          document.querySelector('html, body').animate({
-            scrollTop: document.querySelector(hash).offset().top
-          }, 800, function(){
-
+          $('html, body').animate({
+            scrollTop: $(this.hash).offset().top
+          }, 100, function(){
             window.location.hash = hash;
           });
         }
