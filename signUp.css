@@ -125,7 +125,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 .checkbox-container {
     position: relative;
-    margin-top: -10px;
+    margin-top: -7px;
 }
 
 .checkbox-container svg {
