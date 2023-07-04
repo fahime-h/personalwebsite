@@ -139,7 +139,7 @@ ul {
 }
 
 .home {
-  height: 100svh;
+  height: 100vh;
   background-image: url(./images/home-min.jpg);
   background-size: cover;
   background-position: center;
@@ -635,7 +635,7 @@ ul {
   text-align: center;
   opacity: 0;
   transition: opacity .9s;
-  z-index: 99;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -799,6 +799,7 @@ ul {
   visibility: hidden;
   cursor: pointer;
   transition: background-color .9s;
+  z-index: 99;
 }
 
 #go-up-btn:hover {
@@ -1018,7 +1019,7 @@ header ul {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
   }
   .left-container {
     display: none;

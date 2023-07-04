@@ -760,8 +760,8 @@
         value.addEventListener("click", (e) => {
           document.querySelector(".active-menu").classList.toggle("active-menu");
           e.target.classList.toggle("active-menu");
-          // openMenu();
           setTimeout(openMenu, 100);
+          document.querySelector(".ham1").classList.toggle("active");
         });
       });
 
