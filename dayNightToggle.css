@@ -103,13 +103,13 @@ body {
 .transform-r {
     /* transform: translateX(463px); */
     transform: translateX(calc(100cqw - 100%));
-    transition: transform 1s linear;
+    transition: transform .5s linear;
 
 }
 
 .transform-l {
     transform: translateX(0);
-    transition: transform 1s linear;
+    transition: transform .5s linear;
 }
 
 .day-c1, .day-c2, .day-c3 {
